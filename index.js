@@ -142,17 +142,17 @@ const countryAmelie = () => {
     fetch('http://www.omdbapi.com/?apikey=3a4ab00&t=Amélie&plot=full')
     .then(res => res.json())
     .then(movies => { 
-        const years= movies;
+        const country= movies.Country;
         console.log(movies)
         const imageMovie= movies.Poster;
             lista.innerHTML= 
                  `
-            <p>¿Qué año se estrenó Titanic? 
+            <p>¿De qué nacionalidad es la pelicula Amélie? 
                 <div> <img src= "${imageMovie}"></div>
-                <p><input type="radio"> ${years}<br>
-                <input type="radio"> 2009 <br>
-                <input type="radio"> 2011<br>
-                <input type="radio"> 2013
+                <p><input type="radio"> Italian<br>
+                <input type="radio"> ${country} <br>
+                <input type="radio"> USA <br>
+                <input type="radio"> 
             </p>    
                 `
     })
