@@ -1,77 +1,66 @@
-.navbar {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    border: none;
-}
-
-.navbar-dark-intense {
-    background: rgb(38, 38, 38);
-}
-
-.main {
-    color: #ffff;
-    background: rgb(38, 38, 38);
-    flex: 1;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-
-/*Encabezado de preguntas*/
-
-.main-header {
-    text-align: center;
-}
-
-
-/*Container-main*/
-
-#movies {
-    padding: 0;
-    margin: 0;
-}
-
-
-/*Container image*/
-
-.container-circle {
-    margin: 0 auto;
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-
-/**/
-
-input[type="radio"] {
-    margin-right: 10px;
-}
-
-.radio-container {
-    padding: 0px 60px;
-}
-
-
-/*Boton play*/
-
-.btnlg {
-    margin: 0 auto;
-    display: block !important;
-    padding: 1rem 3rem !important;
-}
-
-
-/*BOTONES*/
-
-#btn1,
-#btn2,
-#btn3,
-#btn4,
-#btn5 {
-    display: none;
-}
+    .navbar {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        border: none;
+    }
+    
+    .navbar-dark-intense {
+        background: rgb(38, 38, 38);
+    }
+    
+    .main {
+        color: #ffff;
+        background: rgb(38, 38, 38);
+        flex: 1;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    /*Encabezado de preguntas*/
+    
+    .main-header {
+        text-align: center;
+    }
+    /*Container-main*/
+    
+    #movies {
+        padding: 0;
+        margin: 0;
+    }
+    /*Container image*/
+    
+    .container-circle {
+        margin: 0 auto;
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    /**/
+    
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+    
+    .radio-container {
+        padding: 0px 60px;
+    }
+    /*Boton play*/
+    
+    .btnlg {
+        margin: 0 auto;
+        display: block !important;
+        padding: 1rem 3rem !important;
+    }
+    /*BOTONES*/
+    
+    .start,
+    .next2,
+    .next3,
+    .next4,
+    .next5,
+    .next6 {
+        display: none;
+    }
