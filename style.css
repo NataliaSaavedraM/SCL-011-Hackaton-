@@ -12,6 +12,8 @@
         background: rgb(38, 38, 38);
         flex: 1;
     }
+
+    
     
     body {
         display: flex;
@@ -51,16 +53,13 @@
     
     .btnlg {
         margin: 0 auto;
-        display: block !important;
+        display: block ;
         padding: 1rem 3rem !important;
     }
     /*BOTONES*/
     
-    .start,
-    .next2,
-    .next3,
-    .next4,
-    .next5,
-    .next6 {
+
+    #seccion2, #seccion3, #seccion4, #seccion5,#seccion6
+    {
         display: none;
     }

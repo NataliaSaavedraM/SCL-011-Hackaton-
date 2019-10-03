@@ -15,9 +15,9 @@ const actorsAvengers = () => {
          <header class="main-header container-fluid">
           <h3> ¿Quienes protagonizan la pelicula The Avengers?  </h3>
          </header>
-         <div> <img src= "${imageMovie}"> </div>
-         <p><input type="radio">${actor}<br>
-         <div class="container-fluid>
+         <div class="container-circle"> <img class="img-fluid" src="${imageMovie}"></div> 
+         <div class="radio-container">
+         <input type="radio">${actor}<br>
          <input type="radio">Robert Downey Jr., Chris Prat, Mark Ruffalo, Chris Hemsworth<br>
          <input type="radio">Robert Downey Jr., Chris Evans, Edward Norton, Chris Hemsworth<br>
          <input type="radio">Robert Downey Jr., Chris Pine, Mark Ruffalo, Chris Hemsworth <br>
@@ -83,18 +83,7 @@ const movieActors = () => {
         .catch(error => error);
 }
 
-
-
-const boton = document.getElementById('boton');
-boton.addEventListener('click', () => {
-    //actorsAvengers()
-    //movieActress();
-    //movieActors();
-    //yearsAvengers();
-    //yearsWizard();
-    //yearsTitanic();
-    countryAmelie();
-})
+    
 
 const section1 = document.getElementById('seccion1');
 section1.addEventListener('click', () => {
@@ -121,8 +110,8 @@ const yearsAvengers = () => {
              <header class="main-header container-fluid">
               <h3> ¿En qué año se estrenó la pelicula The Avengers?  </h3>
              </header>
-             <div> <img src= "${imageMovie}"> </div>
-             <div class="container-fluid">
+             <div class="container-circle"> <img class="img-fluid" src="${imageMovie}"></div> 
+             <div class="radio-container"> 
               <input type="radio"> 1998<br>
               <input type="radio"> 2000 <br>
               <input type="radio"> ${years}<br>
@@ -146,8 +135,8 @@ const yearsWizard = () => {
                     <header class="main-header container-fluid">
                         <h3> ¿Cúal es el año de estreno de el Mago de Oz?  </h3>
                     </header>
-                    <div> <img src= "${imageMovie}"></div>
-                    <div class="container-fluid">
+                    <div class="container-circle"> <img class="img-fluid" src="${imageMovie}"></div> 
+                    <div class="radio-container"> 
                      <input type="radio"> ${years}<br>
                      <input type="radio"> 2009<br>
                      <input type="radio"> 2011<br>
@@ -171,8 +160,8 @@ const yearsTitanic = () => {
                  <header class="main-header container-fluid">
                     <h3> ¿Qué año se estrenó Titanic? </h3>
                 </header>
-                <div> <img src= "${imageMovie}"></div>
-                <div class="container-fluid">
+                <div class="container-circle"> <img class="img-fluid" src="${imageMovie}"></div> 
+                <div class="radio-container"> 
                  <input type="radio" value="correct"> ${years}<br>
                  <input type="radio" value="incorrect"> 2009 <br>
                  <input type="radio" value="incorrect"> 2011<br>
@@ -184,33 +173,7 @@ const yearsTitanic = () => {
         .catch(error => error);
 }
 
-// Pais de origen
-const countryAmelie = () => {
-    fetch('http://www.omdbapi.com/?apikey=3a4ab00&t=Amélie&plot=full')
-        .then(res => res.json())
-        .then(movies => {
-            const country = movies.Country;
-            console.log(movies)
-            const imageMovie = movies.Poster;
-            lista.innerHTML =
-                `
-                    
-                <article> 
-                    <header class="main-header container-fluid">
-                        <h3> ¿De qué nacionalidad es la pelicula Amélie? </h3>
-                    </header>
-                    <div class="container-circle"> <img class="img-fluid" src= "${imageMovie}"></div>
-                    <div class="radio-container">
-                     <input type="radio"> Italian<br>
-                     <input type="radio"> ${country} <br>
-                     <input type="radio"> USA <br>
-                     <input type="radio"> 
-                    </div>
-                </article>    
-                    `
-        })
-        .catch(error => error);
-}
+
 
 const section2 = document.getElementById('seccion2');
 section2.addEventListener('click', () => {
@@ -276,7 +239,7 @@ const countryOld = () => {
             lista.innerHTML =
                 ` <article>
                     <header  class="main-header container-fluid">
-                    ¿De qué nacionalidad es la pelicula OldBoy ?
+                    <h3>¿De qué nacionalidad es la pelicula OldBoy?</h3>
                     </header>
                     <div class="container-circle"> <img class="img-fluid" src="${imageMovie}"> </div>
                     <div class="radio-container">
@@ -310,7 +273,7 @@ const awardsBatman = () => {
             lista.innerHTML =
                 `<article>
                 <header class="main-header container-fluid">
-                 ¿Cuantos premios y nominaciones tuvo Batman de Tim Burton ?
+                 <h3>¿Cuantos premios y nominaciones tuvo Batman de Tim Burton ?</h3>
                 </header>
                <div class="container-circle"> <img class="img-fluid" src="${imageMovie}"></div> 
                <div  class="radio-container">
@@ -334,7 +297,7 @@ const awardsTitanic = () => {
             lista.innerHTML =
                 `           <article>
                     <header class="main-header container-fluid">
-                     ¿Cuantos premios y nominaciones tuvo Titanic ?
+                     <h3>¿Cuantos premios y nominaciones tuvo Titanic?</h3>
                     </header>
                     <div class="container-circle" ><img class="img-fluid" src ="${imageMovie}"> </div> 
                     <div class="radio-container">
@@ -359,7 +322,7 @@ const awardsLand = () => {
             lista.innerHTML =
                 ` <article>
                 <header  class="main-header container-fluid">
-                 ¿Cuantos premios y nominaciones tuvo La la land ?
+                    <h3>¿Cuantos premios y nominaciones tuvo La la land? </h3>
                 </header>
                 <div class="container-circle"> <img class="img-fluid" src ="${imageMovie}"> </div>
                 <div class="radio-container">
@@ -395,13 +358,13 @@ const writerPulp = () => {
             lista.innerHTML =
                 ` <article>
                     <header  class="main-header container-fluid">
-                    ¿Quienes escribieron Pulp Fiction ?
+                    <h3>¿Quienes escribieron Pulp Fiction?</h3>
                     </header>
                    <div  class="container-circle"> <img class="img-fluid" src ="${imageMovie}"></div> 
                    <div class="radio-container">
-                    <input type = "radio" value = "incorrect" > Jhon Travolta(stories), Roger Avary(stories) < br >
-                    <input type = "radio" value = "correct"> ${writer} < br >
-                    <input type = "radio" value = "incorrect" > Quentin Tarantino(stories), Uma Thurman < br >
+                    <input type = "radio" value = "incorrect" > Jhon Travolta(stories), Roger Avary(stories) <br>
+                    <input type = "radio" value = "correct"> ${writer} <br>
+                    <input type = "radio" value = "incorrect" > Quentin Tarantino(stories), Uma Thurman <br>
                     <input type = "radio" value = "incorrect" > Quentin Tarantino(stories), Roger Avary(stories), Samuel L.Jackson 
                   </div>   
                 <article> 
@@ -462,9 +425,9 @@ const section5 = document.getElementById('seccion5');
 section5.addEventListener('click', () => {
 
     section5.style.display = "none";
-    //writerPulp();
+    writerPulp();
     //writerWolf();
-    writerInception();
+    //writerInception();
 
 
 
