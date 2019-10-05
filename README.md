@@ -1,4 +1,4 @@
-![image](https://i.ibb.co/X7rzvHh/logocine-1.png")
+![image](https://i.ibb.co/T1N9Cj5/logo.png")
 ***Perfil de Usuario***
 
 Realizamos una encuesta  para definir a nuestro usuario, con los resultados nos enfocamos a un usuario  mayor de 26 años, que gusta de ver películas de manera habitual y dentro de sus panoramas esta el ir al cine a ver una película.
